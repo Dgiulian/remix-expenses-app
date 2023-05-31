@@ -1,7 +1,7 @@
-/// <reference types="@remix-run/dev" />
-/// <reference types="@remix-run/node" />
+import type { PrismaClient } from "@prisma/client";
 
 declare global {
+  var __db: PrismaClient;
   namespace NodeJS {
     interface Global {
       __db: any;
